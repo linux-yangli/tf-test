@@ -14,7 +14,9 @@ terraform {
     key            = "new/envs/poc/levis/ap-northeast-1/vpc/test-auto-create-vpc/terraform.tfstate"
     region         = "ap-northeast-1"
     dynamodb_table = "terraform-locks"
-
+    assume_role {
+      role_arn = "arn:aws:iam::136703429527:role/levis-test-role-tmp"
+    } 
   }
 }
 module "vpc" {
