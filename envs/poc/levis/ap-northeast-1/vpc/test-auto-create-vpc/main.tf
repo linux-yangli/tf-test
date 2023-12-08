@@ -15,7 +15,7 @@ terraform {
     region         = "ap-northeast-1"
     dynamodb_table = "terraform-locks"
     assume_role = {
-      role_arn = "arn:aws:iam::136703429527:role/levis-test-role-tmp"
+      role_arn = "arn:aws:iam::136703429527:role/test-for-levis-iac"
     } 
   }
 }
