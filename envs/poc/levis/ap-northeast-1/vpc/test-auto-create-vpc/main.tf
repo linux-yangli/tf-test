@@ -21,6 +21,7 @@ terraform {
 }
 
 
+
 module "vpc" {
   source = "../../../../../../modules/vpc_eks"
   vpc_name = "test-auto-create-vpc"
