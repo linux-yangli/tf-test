@@ -36,19 +36,3 @@ steps:
   inputs:
     command: 'validate'
     workingDirectory: '$(Build.SourcesDirectory)'
-
-- task:TerraformTaskV3@3
-  displayName: 'Terraform Plan'
-  inputs:
-    command: 'plan'
-    workingDirectory: '$(Build.SourcesDirectory)'
-    environmentServiceName: '<service_connection_name>'
-    commandOptions: '-out=tfplan'
-
-- task:TerraformTaskV3@3
-  displayName: 'Terraform Apply'
-  inputs:
-    command: 'apply'
-    workingDirectory: '$(Build.SourcesDirectory)'
-    environmentServiceName: '<service_connection_name>'
-    commandOptions: '-auto-approve -input=false tfplan'
